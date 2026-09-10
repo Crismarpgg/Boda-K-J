@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>Karime & Jorge | 21 de Noviembre, 2026</title>
+
+<!-- OPEN GRAPH / WHATSAPP PREVIEW -->
+<meta property="og:title" content="Karime & Jorge | Nuestra Boda">
+<meta property="og:description" content="Con mucha ilusión, les invitamos a ser parte del día en que uniremos nuestras vidas. 21 de Noviembre de 2026.">
+<meta property="og:image" content="https://crismarpgg.github.io/Boda-K-J/preview.jpg">
+<meta property="og:url" content="https://crismarpgg.github.io/Boda-K-J/">
+<meta property="og:type" content="website">
+
+<!-- PRECARGA DE ASSETS CRÍTICOS -->
+<link rel="preload" href="https://crismarpgg.github.io/Boda-K-J/foto-1.jpg" as="image" fetchpriority="high">
+<link rel="preload" href="https://crismarpgg.github.io/Boda-K-J/monograma.png" as="image" fetchpriority="high">
+<link rel="preload" href="https://crismarpgg.github.io/Boda-K-J/sobre.png" as="image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
+  video::-webkit-media-controls { display: none !important; }
+  
+  :root{
+    --cream:#ede7db; --cream-light:#f5f1e8; --paper:#f3efe4;
+    --stone:#cdc4b0; --wine:#5c1a2b; --wine-dark:#4a1522;
+    --gold:#a98a4e; --ink:#3a352e; --ink-soft:#6b6459;
+    --max-w:480px;
+  }
+  
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:#d8d2c3; font-family:"Montserrat",sans-serif; color:var(--ink); display:flex; justify-content:center; -webkit-font-smoothing:antialiased; overflow:hidden;}
+  body.is-open{overflow:auto;}
+  button, a, input, label, textarea { touch-action: manipulation; }
+
+  /* MARCO DOBLE Y POLVO DE ORO */
+  .frame-border{position:fixed; top:12px; bottom:12px; left:12px; right:12px; border:1px solid rgba(169,138,78,0.4); border-radius:12px; z-index:9998; pointer-events:none; opacity:0; transition:opacity 3s ease 0.5s;}
+  .frame-border::before{content:""; position:absolute; top:4px; bottom:4px; left:4px; right:4px; border:1px solid rgba(92,26,43,0.15); border-radius:8px;}
+  body.is-open .frame-border{opacity:1;}
+  #goldDust { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9997; opacity: 0.7; transform: translateZ(0); will-change: transform; }
+
+  /* PRELOADER CINEMÁTICO */
+  #preloader{position:fixed; top:0; left:0; width:100%; height:100%; background:var(--wine-dark); z-index:9999; display:flex; flex-direction:column; align-items:center; justify-content:center; transition:opacity 0.8s ease, transform 0.8s ease;}
+  #preloader.loaded{opacity:0; transform:translateY(-5%); pointer-events:none;}
+  .preloader-names{font-family:"Playfair Display",serif; font-size:68px; color:var(--cream-light); font-style:normal; letter-spacing:8px; font-weight:400; animation:pulseText 3s infinite alternate; text-shadow:0 4px 25px rgba(0,0,0,0.8);}
+  .preloader-text{margin-top:16px; font-size:10px; letter-spacing:5px; text-transform:uppercase; color:var(--cream-light); text-shadow:0 2px 8px rgba(0,0,0,0.6); animation:fadeBlink 2s infinite alternate;}
+  @keyframes pulseText{0%{opacity:0.5; transform:scale(0.98);} 100%{opacity:1; transform:scale(1.02);}}
+  @keyframes fadeBlink{0%{opacity:0.4;} 100%{opacity:1;}}
+  
+  .btn-entrar{background:rgba(0,0,0,0.15); backdrop-filter:blur(4px); border:1px solid var(--cream-light); color:var(--cream-light); padding:16px 44px; font-family:"Montserrat",sans-serif; font-size:11px; letter-spacing:4px; text-transform:uppercase; border-radius:30px; cursor:pointer; transition:all 0.5s ease; box-shadow:0 4px 20px rgba(0,0,0,0.2);}
+  .btn-entrar:hover{background:rgba(0,0,0,0.4); color:var(--cream-light); box-shadow:0 0 30px rgba(245,241,232,0.3);}
+
+  .invitation{width:100%; max-width:var(--max-w); background:var(--cream); position:relative; overflow:hidden; box-shadow:0 0 60px rgba(0,0,0,0.25);}
+  section{position:relative; padding:88px 34px; text-align:center;}
+
+  /* TIPOGRAFIA Y DIVISORES */
+  .eyebrow{font-size:9.5px; letter-spacing:5px; color:var(--ink-soft); text-transform:uppercase; font-weight:600;}
+  h1,h2,h3,.script{font-family:"Playfair Display",serif; font-weight:400; color:rgba(74,21,34,0.85); text-shadow: 1px 1px 2px rgba(255,255,255,0.9), -1px -1px 2px rgba(0,0,0,0.15);}
+  .script{font-style:italic; font-weight:500;}
+  .divider{width:140px; height:1px; background:linear-gradient(90deg, transparent, var(--gold), transparent); margin:40px auto; position:relative; opacity:0.8;}
+  .divider::after{content:""; position:absolute; top:-4px; left:50%; transform:translateX(-50%) rotate(45deg); width:7px; height:7px; border:1px solid var(--gold); background:transparent;}
+
+  /* PORTADA */
+  #portada{position:relative; min-height:100vh; min-height:100dvh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:60px 34px; overflow:hidden;}
+  #portada .reveal{transition:opacity 2.5s ease 0.8s, transform 2.5s ease 0.8s !important;}
+  .video-bg{position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0;}
+  .portada-overlay{position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(237,231,219,0.05); z-index:1;}
+  .monogram-frame{position:relative; display:flex; align-items:center; justify-content:center; margin-bottom:40px; z-index:2;}
+  .monogram-color{width:260px; height:auto; position:relative; z-index:2; top:-160px; filter:brightness(0) invert(1) drop-shadow(0 3px 5px rgba(0,0,0,0.5)) drop-shadow(0 20px 40px rgba(0,0,0,0.4)); animation:floatMonogram 7s ease-in-out infinite;}
+  @keyframes floatMonogram{0%,100%{transform:translateY(0) scale(1);} 50%{transform:translateY(-10px) scale(1.015);}}
+  
+  /* INDICADOR DE SCROLL */
+  .scroll-indicator{position:absolute; bottom:40px; left:50%; transform:translateX(-50%); width:2px; height:50px; background:rgba(255,255,255,0.2); z-index:2; overflow:hidden;}
+  .scroll-indicator::after{content:""; position:absolute; top:0; left:0; width:100%; height:50%; background:var(--cream-light); animation:scrollDrop 2s infinite cubic-bezier(0.4, 0, 0.2, 1);}
+  @keyframes scrollDrop{0%{transform:translateY(-100%);} 50%{transform:translateY(200%);} 100%{transform:translateY(200%);}}
+
+  /* RELOJ */
+  .countdown-box{display:flex; justify-content:center; gap:20px; margin:0 auto 45px; padding:24px 15px; background:var(--cream-light); border:1px solid var(--wine-dark); outline:1px solid var(--wine-dark); outline-offset:-4px; max-width:340px; box-shadow:0 15px 30px rgba(0,0,0,0.08); z-index:2; position:relative;}
+  .cd-item{display:flex; flex-direction:column; text-align:center; position:relative; min-width:50px;}
+  .cd-item:not(:last-child)::after{content:""; position:absolute; right:-10px; top:10%; height:80%; width:1px; background:linear-gradient(to bottom, transparent, rgba(92,26,43,0.25), transparent);}
+  .cd-num{font-family:"Playfair Display",serif; font-size:42px; color:var(--wine-dark); font-weight:300; line-height:1;}
+  .cd-label{font-size:8.5px; font-weight:600; text-transform:uppercase; letter-spacing:3px; color:var(--ink-soft); margin-top:12px;}
+
+  /* NOMBRES EDITORIALES */
+  #nombres{background:var(--cream);}
+  .parents{display:flex; justify-content:center; gap:34px; margin:24px 0 16px; font-family:"Playfair Display",serif; font-style:italic; font-size:15px; line-height:1.4; color:var(--ink);}
+  .parents div{flex:1; max-width:170px;}
+  .couple-names{margin:30px 0 6px;}
+  .couple-names h1{font-family:"Great Vibes", cursive; font-size:86px; letter-spacing:0; line-height:1; text-transform:none; font-weight:400; color:#4a1522; text-shadow:2px 2px 0px rgba(255,255,255,0.9), 0 10px 25px rgba(74,21,34,0.3);}
+  .amp{font-family:"Great Vibes", cursive; color:var(--gold); font-size:90px; display:block; margin:-20px 0; position:relative; z-index:1; font-weight:400; text-shadow:2px 2px 0px rgba(255,255,255,0.9), 0 8px 20px rgba(169,138,78,0.35);}
+  .invite-copy{font-size:12.5px; line-height:1.9; color:var(--ink-soft); margin:26px 0; letter-spacing:0.3px;}
+  .wedding-date{font-family:"Didot", "Bodoni MT", "Bodoni 72", "Playfair Display", serif; font-size:22px; font-weight:500; letter-spacing:1px; color:var(--wine-dark); margin-bottom:26px;}
+  .godparents small{display:block; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--ink-soft); margin-bottom:10px;}
+  .godparents p{font-family:"Playfair Display",serif; font-style:italic; font-size:15px; line-height:1.8; color:var(--ink);}
+  .location-tag{margin-top:35px; font-size:10px; letter-spacing:4px; text-transform:uppercase; color:var(--ink-soft); font-weight:500;}
+
+  /* FOTOS ARCO */
+  .parallax-mask{position:relative; height:95vh; height:95dvh; width:90%; margin:50px auto; border-radius:250px 250px 10px 10px; box-shadow:0 20px 40px rgba(0,0,0,0.15); -webkit-mask-image:-webkit-radial-gradient(white, black);}
+  .parallax-mask::after{content:""; position:absolute; top:8px; bottom:8px; left:8px; right:8px; border:1px solid rgba(255,255,255,0.6); box-shadow:inset 0 0 20px rgba(0,0,0,0.15); border-radius:242px 242px 4px 4px; pointer-events:none; z-index:2;}
+  .parallax-inner{position:absolute; top:0; left:0; width:100%; height:100%; border-radius:inherit; background-position:center; background-repeat:no-repeat; background-size:cover; background-attachment:fixed;}
+  @supports (-webkit-touch-callout: none) {
+    .parallax-mask{overflow:hidden; transform:translateZ(0);}
+    .parallax-inner{top:-15%; height:130%; border-radius:0; background-attachment:scroll; will-change:transform; transform:translate3d(0, 0, 0);}
+  }
+
+  /* UBICACIONES */
+  #ubicaciones{background:var(--paper);}
+  .location-card{background:linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(245,241,232,0.6) 100%); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); transform:translateZ(0); border:1px solid rgba(255,255,255,0.6); border-bottom:1px solid rgba(92,26,43,0.15); border-radius:20px; padding:45px 24px; margin-bottom:24px; box-shadow:0 25px 50px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8);}
+  .location-card h3{font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--ink-soft); margin-bottom:8px; font-weight:600;}
+  .venue-name{font-family:"Playfair Display",serif; font-size:20px; font-style:italic; color:var(--wine-dark); margin-bottom:6px; font-weight:500;}
+  .venue-time{font-size:12px; color:var(--ink-soft); letter-spacing:0.5px; margin-bottom:18px;}
+  .btn-outline{display:inline-block; padding:12px 28px; font-size:9.5px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--wine-dark); border:1px solid rgba(92,26,43,0.4); border-radius:30px; text-decoration:none; background:transparent; transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);}
+  @media (hover: hover) { .btn-outline:hover{transform:scale(1.03); background:rgba(92,26,43,0.06); box-shadow:0 4px 15px rgba(92,26,43,0.05);} }
+
+  /* ITINERARIO */
+  #itinerario { background: var(--cream); padding: 40px 20px 80px; }
+  .itinerary-wrapper { position: relative; max-width: 420px; margin: 0 auto; }
+  .envelope-bg { display: block; width: 100%; height: auto; position: relative; z-index: 1; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15)); }
+  .itinerary-card { background: var(--paper); border-radius: 250px; padding: 85px 20px 60px; width: 76%; margin: -35% auto 0; position: relative; z-index: 2; box-shadow: 0 25px 50px rgba(0,0,0,0.15), inset 0 0 0 4px var(--paper), inset 0 0 0 5px rgba(92,26,43,0.15); border: 1px solid rgba(255,255,255,0.6); }
+  .itinerary-item { margin-bottom: 32px; display: flex; flex-direction: column; align-items: center; }
+  .itinerary-item:last-child { margin-bottom: 0; }
+  .itinerary-icon { width: 34px; height: 34px; margin-bottom: 12px; stroke: var(--wine-dark); fill: none; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+  .itinerary-title { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--ink); margin-bottom: 6px; font-weight: 500; text-align: center; }
+  .itinerary-time { font-family: "Playfair Display", serif; font-style: italic; font-size: 15px; color: var(--wine-dark); }
+
+  /* DETALLES */
+  #detalles{background:var(--paper); padding:60px 20px;}
+  .details-card{background:var(--cream-light); border:2px solid var(--wine); padding:8px; margin-bottom:-60px; position:relative; z-index:2; box-shadow:0 15px 30px rgba(0,0,0,0.12); border-radius:0;}
+  .details-card-inner{border:1px solid var(--wine-dark); padding:40px 20px; border-radius:0; outline:1px solid var(--wine-dark); outline-offset:-5px;}
+  .detail-block{margin-bottom:26px;}
+  .detail-block:last-child{margin-bottom:0;}
+  .detail-block .label{font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px;}
+  .detail-block .value{font-size:13px; color:var(--ink); font-weight:500;}
+  .palette{display:flex; justify-content:center; gap:10px; margin-top:12px;}
+  .palette span{width:22px; height:22px; border-radius:50%; border:1px solid rgba(0,0,0,0.15); display:inline-block;}
+  
+  .floating-seal { animation: floatSeal 6s ease-in-out infinite; }
+  @keyframes floatSeal { 
+    0%, 100% { transform: translateX(-50%) translateY(0); filter: drop-shadow(0 12px 15px rgba(0,0,0,0.25)); } 
+    50% { transform: translateX(-50%) translateY(-6px); filter: drop-shadow(0 18px 20px rgba(0,0,0,0.15)); } 
+  }
+
+  .gift-card{margin-top:0; background:linear-gradient(180deg, var(--wine-dark) 0%, #3a101b 100%); color:var(--cream-light); padding:100px 26px 44px; border-radius:150px 150px 20px 20px; position:relative; z-index:1; box-shadow:0 25px 50px rgba(0,0,0,0.2), inset 0 2px 0 rgba(255,255,255,0.1);}
+  .gift-card .script{color:var(--cream-light); font-size:24px; margin-bottom:26px; text-shadow:none;}
+  .gift-block{margin-bottom:24px;}
+  .gift-block .label{font-size:11px; letter-spacing:2px; text-transform:uppercase; opacity:0.85; margin-bottom:8px;}
+  .gift-block .value{font-size:13px; letter-spacing:0.5px; line-height:1.7;}
+  .btn-solid{display:inline-block; padding:10px 26px; font-size:10.5px; letter-spacing:2px; text-transform:uppercase; color:var(--wine-dark); background:var(--cream-light); border-radius:30px; text-decoration:none; margin-top:6px; transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);}
+  @media (hover: hover) { .btn-solid:hover{transform:scale(1.03); background:#ffffff; box-shadow:0 6px 20px rgba(0,0,0,0.15);} }
+  .divider-light{width:60px; height:1px; background:var(--cream-light); margin:30px auto; position:relative; opacity:0.5;}
+
+  /* RSVP */
+  #rsvp{background:var(--cream); padding-bottom:110px;}
+  .passes-box{margin:26px auto 34px; width:120px; height:120px; border:1px solid var(--wine-dark); border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;}
+  .passes-box .num{font-family:"Playfair Display",serif; font-size:44px; color:var(--wine-dark); line-height:1;}
+  .passes-box .lbl{font-size:9px; letter-spacing:1.5px; text-transform:uppercase; color:var(--ink-soft);}
+  .rsvp-copy{font-size:12.5px; line-height:1.9; color:var(--ink-soft); margin-bottom:8px; max-width:320px; margin-left:auto; margin-right:auto;}
+  
+  .field-group{text-align:left; margin-bottom:20px; max-width:340px; margin-left:auto; margin-right:auto;}
+  .field-label{display:block; font-size:11px; letter-spacing:1.8px; text-transform:uppercase; color:var(--ink-soft); margin-bottom:8px;}
+  .field-input{width:100%; background:transparent; border:none; border-bottom:1px solid rgba(92,26,43,0.4); border-radius:0; -webkit-appearance:none; padding:16px 4px; font-family:"Playfair Display",serif; font-style:italic; font-size:18px; color:var(--wine-dark); outline:none; transition:all .4s ease; resize:vertical;}
+  .field-input::placeholder{color:var(--ink-soft); font-style:normal; font-family:"Montserrat",sans-serif; font-size:11px; letter-spacing:2px; text-transform:uppercase;}
+  .field-input:focus{border-bottom:1px solid var(--gold); background:rgba(255,255,255,0.5); box-shadow:0 10px 20px rgba(169,138,78,0.05);}
+  
+  .radio-group{display:flex; flex-direction:column; gap:10px;}
+  .radio-opt{display:flex; align-items:center; gap:12px; padding:13px 16px; background:var(--paper); border:1px solid var(--stone); border-radius:6px; cursor:pointer; font-size:13.5px; color:var(--ink); user-select:none; transition:all 0.3s ease;}
+  .radio-opt input[type="radio"]{display:none;}
+  @media (hover: hover) { .radio-opt:hover{transform:scale(1.02); border-color:var(--wine);} }
+  .radio-opt.selected{border-color:var(--wine); background:rgba(92,26,43,0.06);}
+  .radio-box{width:24px; height:24px; border-radius:50%; border:1.5px solid var(--stone); flex-shrink:0; display:flex; align-items:center; justify-content:center;}
+  .radio-box svg{width:14px; height:14px; fill:none; stroke:var(--cream-light); opacity:0;}
+  .radio-opt.selected .radio-box{border-color:var(--wine-dark); background:var(--wine-dark);}
+  .radio-opt.selected .radio-box svg{opacity:1;}
+  
+  .btn-rsvp{display:inline-block; margin-top:16px; padding:18px 48px; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--cream-light); background:linear-gradient(135deg, var(--wine) 0%, var(--wine-dark) 100%); border-radius:40px; text-decoration:none; box-shadow:0 10px 25px rgba(92,26,43,0.3), inset 0 1px 1px rgba(255,255,255,0.2); border:none; font-family:"Montserrat",sans-serif; cursor:pointer; transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1); width:100%; max-width:300px;}
+  .btn-rsvp:active{transform:scale(0.97); box-shadow:0 5px 15px rgba(92,26,43,0.2);}
+  .btn-rsvp:disabled{opacity:.5; cursor:not-allowed;}
+  .field-error{color:var(--wine); font-size:12px; margin-top:10px; min-height:18px;}
+  
+  .spinner{width:36px; height:36px; border:2px solid var(--stone); border-top-color:var(--wine-dark); border-radius:50%; margin:0 auto; animation:spin .8s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .success-icon{width:64px; height:64px; margin:0 auto;}
+  .success-icon svg{width:100%; height:100%;}
+  
+  footer{text-align:center; padding:30px 0 40px; background:var(--cream);}
+  footer .script{font-size:15px; color:var(--ink-soft); text-shadow:none;}
+
+  .reveal{opacity:0; transform:translateY(28px); transition:opacity 0.75s ease, transform 0.75s ease; will-change:opacity, transform;}
+  .reveal.visible{opacity:1; transform:translateY(0);}
+  .reveal-delay-1{transition-delay:0.1s;}
+  .reveal-delay-2{transition-delay:0.2s;}
+  .reveal-delay-3{transition-delay:0.3s;}
+  .reveal-delay-4{transition-delay:0.4s;}
+  .reveal-delay-5{transition-delay:0.5s;}
+  @media(min-width:481px){body{background:#c9c2ae; padding:40px 0;} .invitation{border-radius:12px; box-shadow:0 30px 60px rgba(0,0,0,0.15), 0 0 0 1px rgba(255,255,255,0.4);}}
+</style>
+</head>
+<body>
+
+<div class="frame-border"></div>
+<canvas id="goldDust"></canvas>
+
+<div id="preloader">
+  <div id="loaderSpinner" class="preloader-names">K &amp; J</div>
+  <p class="preloader-text" id="loaderText">Preparando detalles</p>
+  <p id="loaderHint" style="display:none; margin-top:20px; font-size:8.5px; letter-spacing:3px; text-transform:uppercase; color:rgba(245,241,232,0.8); text-align:center; line-height:1.8;">Para mejorar la experiencia,<br>sube el brillo y volumen</p>
+  <button class="btn-entrar" id="btnEntrar" style="display:none; margin-top:24px;">Ver invitación</button>
+</div>
+
+<main class="invitation">
+
+<!-- PORTADA -->
+<header id="portada">
+  <video id="bgVideo" class="video-bg" src="https://crismarpgg.github.io/Boda-K-J/video.mp4" autoplay loop muted playsinline webkit-playsinline disablePictureInPicture preload="metadata" poster="https://crismarpgg.github.io/Boda-K-J/foto-1.jpg"></video>
+  <div class="portada-overlay"></div>
+  
+  <div class="monogram-frame reveal">
+    <img class="monogram-color" src="https://crismarpgg.github.io/Boda-K-J/monograma.png" alt="Monograma Karime & Jorge">
+  </div>
+  
+  <div class="scroll-indicator reveal" style="transition-delay: 2.5s !important;"></div>
+
+  <audio id="bgMusic" loop preload="auto">
+    <source src="https://crismarpgg.github.io/Boda-K-J/cancion.MP3" type="audio/mpeg">
+  </audio>
+</header>
+
+<!-- NOMBRES -->
+<section id="nombres">
+  <p class="eyebrow reveal" style="margin-bottom:10px;">Con la bendición de Dios</p>
+  <p class="eyebrow reveal reveal-delay-1" style="margin-bottom:36px;">Y de nuestros padres</p>
+  <div class="parents reveal reveal-delay-2">
+    <div>
+      <p style="margin-bottom: 16px;">José Antonio<br>López Morales</p>
+      <p>Esthela Karina<br>García Quiroz</p>
+    </div>
+    <div>
+      <p style="margin-bottom: 16px;">Jorge Luis<br>Vega Martínez</p>
+      <p>Lucina del Carmen<br>López Alvarado</p>
+    </div>
+  </div>
+  <div class="couple-names reveal reveal-delay-3">
+    <h1>Karime</h1>
+    <span class="amp">&amp;</span>
+    <h1>Jorge</h1>
+  </div>
+  <p class="invite-copy reveal reveal-delay-4">Les invitamos a formar parte<br>del comienzo de nuestra historia juntos</p>
+  <p class="wedding-date reveal reveal-delay-5">Sábado 21 de Noviembre de 2026</p>
+  <div class="divider reveal" style="transition-delay:0.6s;"></div>
+  <div class="godparents reveal" style="transition-delay:0.7s;">
+    <small>Padrinos de velación</small>
+    <p style="margin-bottom: 8px;">Fausto García Quiroz<br>Nancy Denise Caro Quevedo</p>
+    <p style="margin-bottom: 24px;">Ramón Casillas Castro<br>Francia Areli López Ibarra</p>
+    
+    <small>Padrinos de lazo</small>
+    <p>Guillermo Arredondo Zazueta<br>Kenia Verenice López Ibarra</p>
+  </div>
+</section>
+
+<div class="parallax-mask" aria-hidden="true">
+  <div class="parallax-inner" style="background-image: url('https://crismarpgg.github.io/Boda-K-J/foto-1.jpg');"></div>
+</div>
+
+<!-- UBICACIONES -->
+<section id="ubicaciones" class="reveal">
+  <p class="script" style="font-size:26px;">Ubicaciones</p>
+  <div class="divider"></div>
+  
+  <div class="location-card" style="padding: 24px 20px;">
+    <h3>Ceremonia</h3>
+    <p class="venue-name">Parroquia de San Gabriel</p>
+    <p class="venue-time" style="margin-bottom: 16px;">5:00 PM</p>
+    <div style="width: 100%; height: 180px; border-radius: 8px; overflow: hidden; margin-bottom: 16px; border: 1px solid rgba(92,26,43,0.2);">
+      <iframe src="https://maps.google.com/maps?q=24.818256506605145,-107.40011064316235&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; filter: grayscale(100%) sepia(40%) hue-rotate(-15deg) contrast(90%);" allowfullscreen=""></iframe>
+    </div>
+    <a class="btn-outline" href="https://maps.app.goo.gl/12MBpZJ59JNQSAUBA" target="_blank">Abrir en App</a>
+  </div>
+
+  <div class="location-card" style="padding: 24px 20px;">
+    <h3>Recepción</h3>
+    <p class="venue-name">Jardines del Sol</p>
+    <p class="venue-time" style="margin-bottom: 16px;">8:00 PM</p>
+    <div style="width: 100%; height: 180px; border-radius: 8px; overflow: hidden; margin-bottom: 16px; border: 1px solid rgba(92,26,43,0.2);">
+      <iframe src="https://maps.google.com/maps?q=24.765332955943983,-107.68908798686493&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; filter: grayscale(100%) sepia(40%) hue-rotate(-15deg) contrast(90%);" allowfullscreen=""></iframe>
+    </div>
+    <a class="btn-outline" href="https://maps.app.goo.gl/tSDx2gF6tsiiWpV4A" target="_blank">Abrir en App</a>
+  </div>
+</section>
+
+<!-- ITINERARIO -->
+<section id="itinerario" class="reveal">
+  <div class="itinerary-wrapper">
+    <img src="https://crismarpgg.github.io/Boda-K-J/sobre-abierto.png" alt="Fondo Sobre Abierto" class="envelope-bg reveal">
+    <div class="itinerary-card reveal" style="transition-delay: 0.4s !important;">
+      <img src="https://crismarpgg.github.io/Boda-K-J/sello.png" alt="Sello" class="floating-seal" style="position:absolute; top:-45px; left:50%; width:90px; z-index:5;">
+      <p class="script" style="font-size:28px; margin-bottom:40px;">Itinerario</p>
+      
+      <div class="itinerary-item">
+        <svg class="itinerary-icon" viewBox="0 0 24 24"><path d="M12 2v4M8 12v10M16 12v10M6 22h12M12 6a6 6 0 0 0-6 6v10h12V12a6 6 0 0 0-6-6z"/></svg>
+        <p class="itinerary-title">Ceremonia Religiosa</p>
+        <p class="itinerary-time">5:00 PM</p>
+      </div>
+      
+      <div class="itinerary-item">
+        <svg class="itinerary-icon" viewBox="0 0 24 24"><path d="M3 5l9 9 9-9M12 14v8M8 22h8M3 5h18"/></svg>
+        <p class="itinerary-title">Recepción</p>
+        <p class="itinerary-time">8:00 PM</p>
+      </div>
+      
+      <div class="itinerary-item">
+        <svg class="itinerary-icon" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M5 21v-4a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v4"/></svg>
+        <p class="itinerary-title">Primer Baile de Esposos</p>
+        <p class="itinerary-time">8:30 PM</p>
+      </div>
+      
+      <div class="itinerary-item">
+        <svg class="itinerary-icon" viewBox="0 0 24 24"><path d="M12 7a9 9 0 0 0-9 9h18a9 9 0 0 0-9-9zM3 16h18M12 4v3M8 5l1 2M16 5l-1 2"/></svg>
+        <p class="itinerary-title">Cena</p>
+        <p class="itinerary-time">9:00 PM</p>
+      </div>
+      
+      <div class="itinerary-item">
+        <svg class="itinerary-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+        <p class="itinerary-title">¡Todos a Bailar!</p>
+        <p class="itinerary-time">9:30 PM</p>
+      </div>
+      
+      <div class="divider" style="margin: 30px auto 20px;"></div>
+      <div class="detail-block" style="margin-bottom: 0;">
+        <p class="label" style="font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px;">Respetuosamente</p>
+        <p class="value" style="font-size:14px; color:var(--wine-dark); font-weight:600; text-transform:uppercase; letter-spacing:2px;">No niños</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="parallax-mask" aria-hidden="true">
+  <div class="parallax-inner" style="background-image: url('https://crismarpgg.github.io/Boda-K-J/foto-3.jpeg');"></div>
+</div>
+
+<!-- DETALLES -->
+<section id="detalles" class="reveal">
+  <div class="details-card" style="margin-top: 40px;">
+    <img src="https://crismarpgg.github.io/Boda-K-J/etiqueta.png" alt="Etiqueta KJ" class="floating-seal" style="position:absolute; top:-65px; left:50%; width:110px; z-index:5;">
+    <div class="details-card-inner" style="padding-top: 60px;">
+      <p class="script" style="font-size:28px; color:#4a1522; margin-bottom:0;">Dress Code</p>
+      <div class="divider" style="margin: 25px auto 25px;"></div>
+      
+      <div class="detail-block" style="margin-bottom: 10px;">
+        <p style="font-family:'Great Vibes', cursive; font-size:46px; color:var(--wine-dark); margin-bottom:16px; line-height:1; font-weight:400;">Glam Nocturno</p>
+        
+        <p style="font-size:11.5px; line-height:1.7; color:var(--ink); margin-bottom:0; padding:0 10px; font-weight:500;">
+          Vestidos de noche con destellos, lentejuelas, plumas o telas satinadas que iluminen la noche y trajes oscuros con accesorios sofisticados como corbata, moño, paño y calzado de etiqueta.
+        </p>
+        
+        <img src="https://crismarpgg.github.io/Boda-K-J/vestido.png" alt="Ilustración Dress Code" style="width:100%; max-width:280px; height:auto; margin:-25px auto -110px; display:block; mix-blend-mode:multiply; filter:contrast(1.05); transform:translateZ(0); will-change:transform;">
+        
+        <p class="label" style="font-size:10px; margin-bottom:12px;">Evitar colores</p>
+        <div class="palette" style="margin-bottom:16px;">
+          <span style="background:#ffffff;"></span>
+          <span style="background:#e9e2d3;"></span>
+          <span style="background:#d9c48f;"></span>
+          <span style="background:#f0e6b8;"></span>
+          <span style="background:#5c6b45;"></span>
+        </div>
+        
+        <p style="font-size:9px; line-height:1.6; color:var(--ink-soft); margin-bottom:24px; padding:0 10px; text-transform:uppercase; letter-spacing:1.5px;">
+          Agradecemos reservar el color blanco para la novia<br>y el verde olivo para las damas.
+        </p>
+        
+        <p style="font-size:10.5px; font-weight:700; letter-spacing:2px; color:var(--ink); margin-bottom:24px;">
+          ¡PREPÁRATE PARA BRILLAR!
+        </p>
+        
+        <a class="btn-outline" href="https://pin.it/ioOdBNlU3" target="_blank">Ver más ideas</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="gift-card">
+    <p class="script" style="font-size:26px;">Sugerencia de regalos</p>
+    
+    <div class="gift-block">
+      <p class="label">Amazon</p>
+      <a class="btn-solid" href="https://www.amazon.com.mx/hz/wishlist/ls/35KH62MY64Z5Y?ref_=wl_share" target="_blank">Ver mesa</a>
+    </div>
+
+    <div class="gift-block">
+      <p class="label">Liverpool</p>
+      <p class="value" style="font-size:12px; margin-bottom:10px;">Evento: 60036791</p>
+      <a class="btn-solid" href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/60036791" target="_blank">Ver mesa</a>
+    </div>
+
+    <div class="gift-block">
+      <p class="label">Coppel</p>
+      <a class="btn-solid" href="#" style="opacity:0.5; pointer-events:none;">Pendiente</a>
+    </div>
+
+    <div class="gift-block" style="margin-top:36px;">
+      <p class="label">Transferencia · Bancoppel</p>
+      <p class="value">
+        <span style="color:var(--gold); font-family:'Montserrat', sans-serif; font-size:14px; letter-spacing:4px; font-weight:600; display:inline-block; margin-bottom:6px;">4169 1614 1851 8089</span><br>
+        Jorge Luis Vega López
+      </p>
+    </div>
+    
+    <div class="divider-light"></div>
+    <div class="gift-block" style="margin-bottom:0;">
+      <p class="label">Su presencia</p>
+      <p class="value">Es el mejor obsequio</p>
+    </div>
+  </div>
+</section>
+
+<div class="parallax-mask" aria-hidden="true">
+  <div class="parallax-inner" style="background-image: url('https://crismarpgg.github.io/Boda-K-J/foto-2.jpg');"></div>
+</div>
+
+<!-- RSVP -->
+<section id="rsvp" style="position:relative; margin-top:-60px; background:var(--paper); border-radius:200px 200px 0 0; box-shadow:0 -20px 50px rgba(0,0,0,0.1); border-top:1px solid rgba(255,255,255,0.6); z-index:3;">
+  <img src="https://crismarpgg.github.io/Boda-K-J/sello.png" alt="Sello de Cera" class="floating-seal" style="position:absolute; top:-55px; left:50%; width:110px; z-index:10;">
+  
+  <div class="reveal" style="padding-top: 80px; padding-bottom: 35px; max-width: 340px; margin: 0 auto;">
+    <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:14.5px; line-height:1.8; color:var(--ink-soft);">
+      "Como ya no son dos sino uno, que nadie separe lo que Dios ha unido."
+    </p>
+    <p style="font-size:9px; letter-spacing:3px; text-transform:uppercase; color:var(--wine); margin-top:12px; font-weight:600;">
+      Mateo 19:6
+    </p>
+  </div>
+  
+  <div id="countdown" class="countdown-box reveal reveal-delay-1">
+    <div class="cd-item"><span class="cd-num" id="cd-days">00</span><span class="cd-label">Días</span></div>
+    <div class="cd-item"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">Hrs</span></div>
+    <div class="cd-item"><span class="cd-num" id="cd-mins">00</span><span class="cd-label">Min</span></div>
+    <div class="cd-item"><span class="cd-num" id="cd-secs">00</span><span class="cd-label">Seg</span></div>
+  </div>
+  
+  <p class="script reveal reveal-delay-1" style="font-size:26px;">RSVP</p>
+  <p class="rsvp-copy reveal reveal-delay-2"><?= textoReserva ?></p>
+  <div class="passes-box reveal reveal-delay-3">
+    <span class="num"><?= pases ?></span>
+    <span class="lbl"><?= labelPases ?></span>
+  </div>
+  <p class="rsvp-copy reveal reveal-delay-4">Agradecemos su pronta confirmación.<br>Favor de responder antes del <strong>15 de octubre de 2026</strong>.</p>
+
+  <div id="rsvpForm" class="reveal reveal-delay-5">
+    <div class="field-group">
+      <label class="field-label" for="guestName">Nombre completo <span style="color:var(--wine);">*</span></label>
+      <input class="field-input" type="text" id="guestName" placeholder="Ej. María González" autocomplete="name" required>
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="guestPhone">Número de teléfono <span style="color:var(--wine);">*</span></label>
+      <input class="field-input" type="tel" id="guestPhone" placeholder="Ej. 662 123 4567" inputmode="numeric" maxlength="20" required>
+    </div>
+    <div class="field-group">
+      <label class="field-label">¿Asistirá a la celebración?</label>
+      <div class="radio-group">
+        <label class="radio-opt selected" id="optConfirma">
+          <input type="radio" name="asistencia" value="confirma" checked>
+          <span class="radio-box"><svg viewBox="0 0 18 18" aria-hidden="true"><polyline points="3,9 7,13 15,5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Con gusto asistiré
+        </label>
+        <label class="radio-opt" id="optNoAsiste">
+          <input type="radio" name="asistencia" value="no_asiste">
+          <span class="radio-box"><svg viewBox="0 0 18 18" aria-hidden="true"><line x1="4" y1="4" x2="14" y2="14" stroke-width="2" stroke-linecap="round"/><line x1="14" y1="4" x2="4" y2="14" stroke-width="2" stroke-linecap="round"/></svg></span>
+          No podré asistir
+        </label>
+      </div>
+    </div>
+    <div class="field-group">
+      <label class="field-label" for="comentarios">Mensaje para los novios <span style="opacity:.5;">(opcional)</span></label>
+      <textarea class="field-input" id="comentarios" rows="3" placeholder="Con cariño..."></textarea>
+    </div>
+    <button class="btn-rsvp" id="submitRsvp">Confirmar respuesta</button>
+    <p class="field-error" id="rsvpError"></p>
+  </div>
+
+  <div id="rsvpSending" style="display:none;">
+    <div class="spinner"></div>
+    <p class="rsvp-copy" style="margin-top:16px;">Enviando confirmación…</p>
+  </div>
+
+  <div id="rsvpSuccess" style="display:none;">
+    <div class="success-icon">
+      <svg viewBox="0 0 48 48" fill="none" stroke="#4a1522" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="24" cy="24" r="20"/><polyline points="14,24 20,31 34,17"/>
+      </svg>
+    </div>
+    <p class="script" style="font-size:24px;color:var(--wine-dark);margin-top:16px;" id="successTitle">¡Gracias!</p>
+    <p class="rsvp-copy" id="successMsg">Tu confirmación ha sido recibida.</p>
+    <a id="btnCalendar" class="btn-solid" href="#" download="Boda_Karime_Jorge.ics" style="display:none; margin-top:20px; background:var(--wine-dark); color:var(--cream-light); border:none;">Guardar en Calendario</a>
+  </div>
+
+  <div id="rsvpErrorState" style="display:none;">
+    <p class="rsvp-copy" style="color:var(--wine-dark);">Hubo un problema de conexión. Por favor intenta de nuevo.</p>
+    <button class="btn-rsvp" id="retryRsvp" style="margin-top:18px;">Reintentar</button>
+  </div>
+</section>
+
+<footer>
+  <p style="font-family:'Great Vibes', cursive; font-size:32px; color:var(--wine-dark); margin-bottom:12px;">Nos vemos pronto</p>
+  <p style="font-family:'Didot', 'Bodoni MT', serif; font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--ink-soft); font-weight:600;">Karime &amp; Jorge</p>
+  <div style="width:5px; height:5px; background:var(--gold); transform:rotate(45deg); margin:20px auto 0; opacity:0.7;"></div>
+</footer>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  var vid = document.getElementById("bgVideo");
+  var btnShown = false;
+  
+  var showBtn = function() {
+    if (btnShown) return;
+    btnShown = true;
+    document.getElementById("loaderText").style.display = "none";
+    var hint = document.getElementById("loaderHint");
+    if(hint) hint.style.display = "block";
+    document.getElementById("btnEntrar").style.display = "block";
+  };
+
+  if (vid && vid.readyState >= 3) {
+    setTimeout(showBtn, 500);
+  } else if (vid) {
+    vid.addEventListener("canplay", showBtn, { once: true });
+    setTimeout(showBtn, 3500);
+  } else {
+    setTimeout(showBtn, 500);
+  }
+});
+
+document.getElementById("btnEntrar").addEventListener("click", function(){
+  try {
+    var audio = document.getElementById("bgMusic");
+    if(audio) audio.play().catch(function(){});
+    var video = document.getElementById("bgVideo");
+    if(video) video.play().catch(function(){});
+  } catch(err) { console.warn("Media ignorada por estabilidad"); }
+
+  document.getElementById("preloader").classList.add("loaded");
+  document.body.classList.add("is-open");
+  
+  if(typeof window.startGoldDust === "function") window.startGoldDust();
+  
+  setTimeout(function(){ 
+    document.getElementById("preloader").style.display = "none"; 
+  }, 1200);
+  
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){ entry.target.classList.add("visible"); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach(function(el){ observer.observe(el); });
+
+  var videoEl = document.getElementById("bgVideo");
+  if(videoEl) {
+    var videoObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if(entry.isIntersecting) { 
+          var playPromise = videoEl.play();
+          if (playPromise !== undefined) { playPromise.catch(function(){}); }
+        } else { 
+          if(!videoEl.paused) { videoEl.pause(); } 
+        }
+      });
+    }, { threshold: 0.01 });
+    videoObserver.observe(document.getElementById("portada"));
+  }
+});
+
+// MOTOR PARALLAX TRANSLATE3D (Solo iOS)
+if (CSS.supports('-webkit-touch-callout', 'none')) {
+  var ticking = false;
+  var parallaxEls = document.querySelectorAll('.parallax-inner');
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        var h = window.innerHeight;
+        parallaxEls.forEach(function(el) {
+          var rect = el.parentElement.getBoundingClientRect();
+          if (rect.top <= h && rect.bottom >= 0) {
+            var percent = (h - rect.top) / (h + rect.height);
+            var y = (percent - 0.5) * 20;
+            el.style.transform = 'translate3d(0, ' + y + '%, 0)';
+          }
+        });
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+}
+
+(function(){
+  var SCRIPT_URL = "<?= scriptUrl ?>";
+  var pases      = <?= pases ?>;
+
+  var boda = new Date("Nov 21, 2026 14:00:00").getTime();
+  setInterval(function(){
+    var now = new Date().getTime(), d = boda - now;
+    if(d < 0) return;
+    document.getElementById("cd-days").innerText = String(Math.floor(d / (1000 * 60 * 60 * 24))).padStart(2, '0');
+    document.getElementById("cd-hours").innerText = String(Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+    document.getElementById("cd-mins").innerText = String(Math.floor((d % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+    document.getElementById("cd-secs").innerText = String(Math.floor((d % (1000 * 60)) / 1000)).padStart(2, '0');
+  }, 1000);
+
+  var radios = document.querySelectorAll(".radio-opt");
+  radios.forEach(function(opt){
+    opt.addEventListener("click", function(){
+      radios.forEach(function(o){ o.classList.remove("selected"); });
+      opt.classList.add("selected");
+      opt.querySelector("input").checked = true;
+    });
+  });
+
+  function getAsistencia(){
+    var r = document.querySelector("input[name=asistencia]:checked");
+    return r ? r.value : "confirma";
+  }
+
+  function showState(s){
+    document.getElementById("rsvpForm").style.display       = s==="form"    ? "" : "none";
+    document.getElementById("rsvpSending").style.display    = s==="sending" ? "" : "none";
+    document.getElementById("rsvpSuccess").style.display    = s==="success" ? "" : "none";
+    document.getElementById("rsvpErrorState").style.display = s==="error"   ? "" : "none";
+  }
+
+  document.getElementById("submitRsvp").addEventListener("click", function(){
+    var nombre  = document.getElementById("guestName").value.trim();
+    var numero  = document.getElementById("guestPhone").value.trim();
+    var errEl   = document.getElementById("rsvpError");
+    
+    if(!nombre){ errEl.textContent="Por favor escribe tu nombre."; return; }
+    if(!numero || numero.replace(/\D/g,"").length < 7){ errEl.textContent="Por favor escribe tu número de teléfono."; return; }
+    errEl.textContent="";
+    document.getElementById("submitRsvp").disabled = true;
+    showState("sending");
+    
+    var asistencia = getAsistencia();
+    
+    // AbortController para evitar cuelgues por mala señal en móviles
+    var controller = new AbortController();
+    var timeoutId = setTimeout(function() { controller.abort(); }, 15000); // 15 segundos max
+    
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyu16VfQlKUNwfKwxEkQJQnQ3bNDgR7wIJ2LvsLAIgW9kkfJcTxFtwCuuAkcJFC2O_y/exec";
+
+    fetch(SCRIPT_URL, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      signal: controller.signal,
+      body: JSON.stringify({
+        id: new URLSearchParams(window.location.search).get("id") || "",
+        nombre: nombre,
+        numero: numero,
+        pases_confirmados: asistencia === "confirma" ? pases : 0,
+        asistencia: asistencia,
+        comentarios: document.getElementById("comentarios").value.trim(),
+        url_origen: window.location.href
+      })
+    })
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data.success) {
+        showState("success");
+        document.getElementById("successTitle").textContent = asistencia==="confirma" ? "¡Hasta el 21 de Noviembre!" : "Gracias por avisarnos";
+        document.getElementById("successMsg").textContent   = asistencia==="confirma"
+          ? "Tu confirmación fue recibida. ¡Nos vemos en la celebración!"
+          : "Lamentamos que no puedas acompañarnos. Gracias por avisarnos.";
+        
+        var btnCal = document.getElementById("btnCalendar");
+        if(asistencia === "confirma") {
+          var icsData = "BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nDTSTART:20261121T210000Z\nDTEND:20261122T080000Z\nSUMMARY:Boda Karime & Jorge\nDESCRIPTION:Ceremonia a las 5:00 PM en Parroquia de San Gabriel. Recepción a las 8:00 PM en Jardines del Sol.\nLOCATION:Navolato, Sinaloa\nBEGIN:VALARM\nTRIGGER:-P2W\nACTION:DISPLAY\nDESCRIPTION:Recordatorio: Boda Karime & Jorge en 2 semanas\nEND:VALARM\nBEGIN:VALARM\nTRIGGER:-P1W\nACTION:DISPLAY\nDESCRIPTION:Recordatorio: Boda Karime & Jorge en 1 semana\nEND:VALARM\nEND:VEVENT\nEND:VCALENDAR";
+          btnCal.href = "data:text/calendar;charset=utf8," + encodeURIComponent(icsData);
+          btnCal.style.display = "inline-block";
+        } else {
+          btnCal.style.display = "none";
+        }
+      } else {
+        throw new Error(data.error);
+      }
+    })
+    .catch(function(err){ 
+      showState("error"); 
+      document.getElementById("submitRsvp").disabled=false; 
+    })
+    .finally(function(){
+      clearTimeout(timeoutId);
+    });
+  });
+
+document.getElementById("retryRsvp").addEventListener("click", function(){
+    showState("form"); 
+    document.getElementById("submitRsvp").disabled=false;
+  });
+
+  // AUDIO DINÁMICO (Fade-out)
+  var audioEl = document.getElementById("bgMusic");
+  var audioFadeInterval;
+  if(audioEl) {
+    var rsvpObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        var targetVol = entry.isIntersecting ? 0.40 : 1.0;
+        var step = (targetVol - audioEl.volume) / 20;
+        clearInterval(audioFadeInterval);
+        audioFadeInterval = setInterval(function() {
+          var nextVol = audioEl.volume + step;
+          if ((step > 0 && nextVol >= targetVol) || (step < 0 && nextVol <= targetVol)) {
+            audioEl.volume = Math.max(0, Math.min(1, targetVol)); clearInterval(audioFadeInterval);
+          } else { audioEl.volume = Math.max(0, Math.min(1, nextVol)); }
+        }, 50);
+      });
+    }, { threshold: 0.2 });
+    rsvpObserver.observe(document.getElementById("rsvp"));
+  }
+
+  // POLVO DE ORO (Canvas)
+  var canvas = document.getElementById("goldDust");
+  if(canvas) {
+    var ctx = canvas.getContext("2d"), particles = [];
+    var lastW = window.innerWidth;
+    function resize() { 
+      if(window.innerWidth !== lastW) { canvas.width = window.innerWidth; canvas.height = window.innerHeight; lastW = window.innerWidth; }
+    }
+    canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+    window.addEventListener("resize", resize, { passive: true });
+    for(var i=0; i<45; i++) particles.push({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*2.5 + 0.5, d: Math.random()*0.4 + 0.1 });
+    function draw() {
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      ctx.fillStyle = "rgba(169, 138, 78, 0.7)";
+      ctx.beginPath();
+      for(var i=0; i<45; i++) {
+        var p = particles[i];
+        ctx.moveTo(p.x, p.y); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2, true);
+      }
+      ctx.fill();
+      for(var j=0; j<45; j++) {
+        var p2 = particles[j]; p2.y -= p2.d;
+        if(p2.y < -10) { p2.y = canvas.height + 10; p2.x = Math.random()*canvas.width; }
+      }
+      requestAnimationFrame(draw);
+    }
+    window.startGoldDust = draw;
+  }
+})();
+</script>
+</body>
+</html>
