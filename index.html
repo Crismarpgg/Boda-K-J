@@ -13,8 +13,14 @@
 <meta property="og:url" content="https://crismarpgg.github.io/Boda-K-J/">
 <meta property="og:type" content="website">
 
+<!-- FAVICON -->
+<link rel="icon" type="image/jpeg" sizes="32x32" href="https://crismarpgg.github.io/Boda-K-J/preview.jpg?v=5">
+<link rel="icon" type="image/jpeg" sizes="16x16" href="https://crismarpgg.github.io/Boda-K-J/preview.jpg?v=5">
+<link rel="apple-touch-icon" sizes="180x180" href="https://crismarpgg.github.io/Boda-K-J/preview.jpg?v=5">
+
 <!-- PRECARGA DE ASSETS CRÍTICOS -->
-<link rel="preload" href="https://crismarpgg.github.io/Boda-K-J/foto-1.jpg" as="image" fetchpriority="high">
+<link rel="preload" href="https://crismarpgg.github.io/Boda-K-J/video.mp4" as="video" type="video/mp4" fetchpriority="high">
+<link rel="preload" href="https://crismarpgg.github.io/Boda-K-J/foto-1.jpg" as="image">
 <link rel="preload" href="https://crismarpgg.github.io/Boda-K-J/monograma.png" as="image" fetchpriority="high">
 <link rel="preload" href="https://crismarpgg.github.io/Boda-K-J/sobre.png" as="image">
 
@@ -22,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
+  video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; appearance: none; }
   video::-webkit-media-controls { display: none !important; }
   
   :root{
@@ -100,7 +106,7 @@
   .location-tag{margin-top:35px; font-size:10px; letter-spacing:4px; text-transform:uppercase; color:var(--ink-soft); font-weight:500;}
 
   /* FOTOS ARCO */
-  .parallax-mask{position:relative; height:95vh; height:95dvh; width:90%; margin:50px auto; border-radius:250px 250px 10px 10px; box-shadow:0 20px 40px rgba(0,0,0,0.15); -webkit-mask-image:-webkit-radial-gradient(white, black);}
+  .parallax-mask{position:relative; height:95vh; height:95dvh; width:90%; margin:50px auto; border-radius:250px 250px 10px 10px; box-shadow:0 20px 40px rgba(0,0,0,0.15); -webkit-mask-image:-webkit-radial-gradient(white, black); mask-image:radial-gradient(white, black);}
   .parallax-mask::after{content:""; position:absolute; top:8px; bottom:8px; left:8px; right:8px; border:1px solid rgba(255,255,255,0.6); box-shadow:inset 0 0 20px rgba(0,0,0,0.15); border-radius:242px 242px 4px 4px; pointer-events:none; z-index:2;}
   .parallax-inner{position:absolute; top:0; left:0; width:100%; height:100%; border-radius:inherit; background-position:center; background-repeat:no-repeat; background-size:cover; background-attachment:fixed;}
   @supports (-webkit-touch-callout: none) {
@@ -109,10 +115,10 @@
   }
 
   /* UBICACIONES */
-  #ubicaciones{background:var(--paper);}
+  #ubicaciones{background:var(--cream);}
   .location-card{background:linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(245,241,232,0.6) 100%); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); transform:translateZ(0); border:1px solid rgba(255,255,255,0.6); border-bottom:1px solid rgba(92,26,43,0.15); border-radius:20px; padding:45px 24px; margin-bottom:24px; box-shadow:0 25px 50px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8);}
   .location-card h3{font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--ink-soft); margin-bottom:8px; font-weight:600;}
-  .venue-name{font-family:"Playfair Display",serif; font-size:20px; font-style:italic; color:var(--wine-dark); margin-bottom:6px; font-weight:500;}
+  .venue-name{font-family:"Didot", "Bodoni MT", "Bodoni 72", "Playfair Display", serif; font-size:21px; font-style:normal; color:var(--wine-dark); margin-bottom:6px; font-weight:500; letter-spacing:1px;}
   .venue-time{font-size:12px; color:var(--ink-soft); letter-spacing:0.5px; margin-bottom:18px;}
   .btn-outline{display:inline-block; padding:12px 28px; font-size:9.5px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--wine-dark); border:1px solid rgba(92,26,43,0.4); border-radius:30px; text-decoration:none; background:transparent; transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);}
   @media (hover: hover) { .btn-outline:hover{transform:scale(1.03); background:rgba(92,26,43,0.06); box-shadow:0 4px 15px rgba(92,26,43,0.05);} }
@@ -121,15 +127,16 @@
   #itinerario { background: var(--cream); padding: 40px 20px 80px; }
   .itinerary-wrapper { position: relative; max-width: 420px; margin: 0 auto; }
   .envelope-bg { display: block; width: 100%; height: auto; position: relative; z-index: 1; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15)); }
-  .itinerary-card { background: var(--paper); border-radius: 250px; padding: 85px 20px 60px; width: 76%; margin: -35% auto 0; position: relative; z-index: 2; box-shadow: 0 25px 50px rgba(0,0,0,0.15), inset 0 0 0 4px var(--paper), inset 0 0 0 5px rgba(92,26,43,0.15); border: 1px solid rgba(255,255,255,0.6); }
-  .itinerary-item { margin-bottom: 32px; display: flex; flex-direction: column; align-items: center; }
+  .itinerary-card { background: var(--paper); border-radius: 250px; padding: 85px 20px 60px; width: 76%; margin: -58% auto 0; position: relative; z-index: 2; box-shadow: 0 25px 50px rgba(0,0,0,0.15), inset 0 0 0 4px var(--paper), inset 0 0 0 5px rgba(92,26,43,0.15); border: 1px solid rgba(255,255,255,0.6); }
+  .itinerary-item { margin-bottom: 20px; display: flex; flex-direction: column; align-items: center; }
   .itinerary-item:last-child { margin-bottom: 0; }
   .itinerary-icon { width: 34px; height: 34px; margin-bottom: 12px; stroke: var(--wine-dark); fill: none; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
-  .itinerary-title { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--ink); margin-bottom: 6px; font-weight: 500; text-align: center; }
+  .itinerary-img { width: 65px; height: auto; margin-bottom: -8px; mix-blend-mode: multiply; filter: contrast(1.1) opacity(0.85); display: block; }
+  .itinerary-title { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--ink); margin-bottom: 0; font-weight: 500; text-align: center; }
   .itinerary-time { font-family: "Playfair Display", serif; font-style: italic; font-size: 15px; color: var(--wine-dark); }
 
   /* DETALLES */
-  #detalles{background:var(--paper); padding:60px 20px;}
+  #detalles{background:var(--cream); padding:60px 20px;}
   .details-card{background:var(--cream-light); border:2px solid var(--wine); padding:8px; margin-bottom:-60px; position:relative; z-index:2; box-shadow:0 15px 30px rgba(0,0,0,0.12); border-radius:0;}
   .details-card-inner{border:1px solid var(--wine-dark); padding:40px 20px; border-radius:0; outline:1px solid var(--wine-dark); outline-offset:-5px;}
   .detail-block{margin-bottom:26px;}
@@ -140,6 +147,7 @@
   .palette span{width:22px; height:22px; border-radius:50%; border:1px solid rgba(0,0,0,0.15); display:inline-block;}
   
   .floating-seal { animation: floatSeal 6s ease-in-out infinite; }
+  .static-seal { transform: translateX(-50%); filter: drop-shadow(0 12px 15px rgba(0,0,0,0.25)); }
   @keyframes floatSeal { 
     0%, 100% { transform: translateX(-50%) translateY(0); filter: drop-shadow(0 12px 15px rgba(0,0,0,0.25)); } 
     50% { transform: translateX(-50%) translateY(-6px); filter: drop-shadow(0 18px 20px rgba(0,0,0,0.15)); } 
@@ -163,7 +171,7 @@
   
   .field-group{text-align:left; margin-bottom:20px; max-width:340px; margin-left:auto; margin-right:auto;}
   .field-label{display:block; font-size:11px; letter-spacing:1.8px; text-transform:uppercase; color:var(--ink-soft); margin-bottom:8px;}
-  .field-input{width:100%; background:transparent; border:none; border-bottom:1px solid rgba(92,26,43,0.4); border-radius:0; -webkit-appearance:none; padding:16px 4px; font-family:"Playfair Display",serif; font-style:italic; font-size:18px; color:var(--wine-dark); outline:none; transition:all .4s ease; resize:vertical;}
+  .field-input{width:100%; background:transparent; border:none; border-bottom:1px solid rgba(92,26,43,0.4); border-radius:0; -webkit-appearance:none; appearance:none; padding:16px 4px; font-family:"Playfair Display",serif; font-style:italic; font-size:18px; color:var(--wine-dark); outline:none; transition:all .4s ease; resize:vertical;}
   .field-input::placeholder{color:var(--ink-soft); font-style:normal; font-family:"Montserrat",sans-serif; font-size:11px; letter-spacing:2px; text-transform:uppercase;}
   .field-input:focus{border-bottom:1px solid var(--gold); background:rgba(255,255,255,0.5); box-shadow:0 10px 20px rgba(169,138,78,0.05);}
   
@@ -210,13 +218,14 @@
   <p class="preloader-text" id="loaderText">Preparando detalles</p>
   <p id="loaderHint" style="display:none; margin-top:20px; font-size:8.5px; letter-spacing:3px; text-transform:uppercase; color:rgba(245,241,232,0.8); text-align:center; line-height:1.8;">Para mejorar la experiencia,<br>sube el brillo y volumen</p>
   <button class="btn-entrar" id="btnEntrar" style="display:none; margin-top:24px;">Ver invitación</button>
+  <p style="position:absolute; bottom:40px; font-size:7.5px; letter-spacing:4px; text-transform:uppercase; color:rgba(245,241,232,0.4);">Diseñado por Eventi.ka</p>
 </div>
 
 <main class="invitation">
 
 <!-- PORTADA -->
 <header id="portada">
-  <video id="bgVideo" class="video-bg" src="https://crismarpgg.github.io/Boda-K-J/video.mp4" autoplay loop muted playsinline webkit-playsinline disablePictureInPicture preload="metadata" poster="https://crismarpgg.github.io/Boda-K-J/foto-1.jpg"></video>
+  <video id="bgVideo" class="video-bg" src="https://crismarpgg.github.io/Boda-K-J/video.mp4" autoplay loop muted playsinline webkit-playsinline disablePictureInPicture preload="auto" poster="https://crismarpgg.github.io/Boda-K-J/foto-1.jpg"></video>
   <div class="portada-overlay"></div>
   
   <div class="monogram-frame reveal">
@@ -295,45 +304,39 @@
 <!-- ITINERARIO -->
 <section id="itinerario" class="reveal">
   <div class="itinerary-wrapper">
-    <img src="https://crismarpgg.github.io/Boda-K-J/sobre-abierto.png" alt="Fondo Sobre Abierto" class="envelope-bg reveal">
+    <img src="https://crismarpgg.github.io/Boda-K-J/sobre.png" alt="Fondo Sobre Abierto" class="envelope-bg reveal" loading="lazy" decoding="async">
     <div class="itinerary-card reveal" style="transition-delay: 0.4s !important;">
-      <img src="https://crismarpgg.github.io/Boda-K-J/sello.png" alt="Sello" class="floating-seal" style="position:absolute; top:-45px; left:50%; width:90px; z-index:5;">
+      <img src="https://crismarpgg.github.io/Boda-K-J/sello.png" alt="Sello" class="static-seal" style="position:absolute; top:-47px; left:50%; width:90px; z-index:5;">
       <p class="script" style="font-size:28px; margin-bottom:40px;">Itinerario</p>
       
       <div class="itinerary-item">
-        <svg class="itinerary-icon" viewBox="0 0 24 24"><path d="M12 2v4M8 12v10M16 12v10M6 22h12M12 6a6 6 0 0 0-6 6v10h12V12a6 6 0 0 0-6-6z"/></svg>
+        <img src="https://crismarpgg.github.io/Boda-K-J/icono-1.png" alt="Ceremonia" class="itinerary-img" style="margin-bottom: -18px;" loading="lazy" decoding="async">
         <p class="itinerary-title">Ceremonia Religiosa</p>
         <p class="itinerary-time">5:00 PM</p>
       </div>
       
       <div class="itinerary-item">
-        <svg class="itinerary-icon" viewBox="0 0 24 24"><path d="M3 5l9 9 9-9M12 14v8M8 22h8M3 5h18"/></svg>
+        <img src="https://crismarpgg.github.io/Boda-K-J/icono-2.png" alt="Recepción" class="itinerary-img" loading="lazy" decoding="async">
         <p class="itinerary-title">Recepción</p>
         <p class="itinerary-time">8:00 PM</p>
       </div>
       
       <div class="itinerary-item">
-        <svg class="itinerary-icon" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M5 21v-4a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v4"/></svg>
+        <img src="https://crismarpgg.github.io/Boda-K-J/icono-3.png" alt="Primer Baile" class="itinerary-img" loading="lazy" decoding="async">
         <p class="itinerary-title">Primer Baile de Esposos</p>
         <p class="itinerary-time">8:30 PM</p>
       </div>
       
       <div class="itinerary-item">
-        <svg class="itinerary-icon" viewBox="0 0 24 24"><path d="M12 7a9 9 0 0 0-9 9h18a9 9 0 0 0-9-9zM3 16h18M12 4v3M8 5l1 2M16 5l-1 2"/></svg>
+        <img src="https://crismarpgg.github.io/Boda-K-J/icono-4.png" alt="Cena" class="itinerary-img" loading="lazy" decoding="async">
         <p class="itinerary-title">Cena</p>
         <p class="itinerary-time">9:00 PM</p>
       </div>
       
       <div class="itinerary-item">
-        <svg class="itinerary-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+        <img src="https://crismarpgg.github.io/Boda-K-J/icono-5.png" alt="Baile" class="itinerary-img" loading="lazy" decoding="async">
         <p class="itinerary-title">¡Todos a Bailar!</p>
         <p class="itinerary-time">9:30 PM</p>
-      </div>
-      
-      <div class="divider" style="margin: 30px auto 20px;"></div>
-      <div class="detail-block" style="margin-bottom: 0;">
-        <p class="label" style="font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px;">Respetuosamente</p>
-        <p class="value" style="font-size:14px; color:var(--wine-dark); font-weight:600; text-transform:uppercase; letter-spacing:2px;">No niños</p>
       </div>
     </div>
   </div>
@@ -346,7 +349,7 @@
 <!-- DETALLES -->
 <section id="detalles" class="reveal">
   <div class="details-card" style="margin-top: 40px;">
-    <img src="https://crismarpgg.github.io/Boda-K-J/etiqueta.png" alt="Etiqueta KJ" class="floating-seal" style="position:absolute; top:-65px; left:50%; width:110px; z-index:5;">
+    <img src="https://crismarpgg.github.io/Boda-K-J/etiqueta.png" alt="Etiqueta KJ" class="floating-seal" style="position:absolute; top:-65px; left:50%; width:110px; z-index:5;" loading="lazy" decoding="async">
     <div class="details-card-inner" style="padding-top: 60px;">
       <p class="script" style="font-size:28px; color:#4a1522; margin-bottom:0;">Dress Code</p>
       <div class="divider" style="margin: 25px auto 25px;"></div>
@@ -358,7 +361,7 @@
           Vestidos de noche con destellos, lentejuelas, plumas o telas satinadas que iluminen la noche y trajes oscuros con accesorios sofisticados como corbata, moño, paño y calzado de etiqueta.
         </p>
         
-        <img src="https://crismarpgg.github.io/Boda-K-J/vestido.png" alt="Ilustración Dress Code" style="width:100%; max-width:280px; height:auto; margin:-25px auto -110px; display:block; mix-blend-mode:multiply; filter:contrast(1.05); transform:translateZ(0); will-change:transform;">
+        <img src="https://crismarpgg.github.io/Boda-K-J/vestido.png" alt="Ilustración Dress Code" style="width:100%; max-width:280px; height:auto; margin:-25px auto -110px; display:block; mix-blend-mode:multiply; filter:contrast(1.05); transform:translateZ(0); will-change:transform;" loading="lazy" decoding="async">
         
         <p class="label" style="font-size:10px; margin-bottom:12px;">Evitar colores</p>
         <div class="palette" style="margin-bottom:16px;">
@@ -422,8 +425,8 @@
 </div>
 
 <!-- RSVP -->
-<section id="rsvp" style="position:relative; margin-top:-60px; background:var(--paper); border-radius:200px 200px 0 0; box-shadow:0 -20px 50px rgba(0,0,0,0.1); border-top:1px solid rgba(255,255,255,0.6); z-index:3;">
-  <img src="https://crismarpgg.github.io/Boda-K-J/sello.png" alt="Sello de Cera" class="floating-seal" style="position:absolute; top:-55px; left:50%; width:110px; z-index:10;">
+<section id="rsvp" style="position:relative; margin-top:-60px; background:var(--paper); border-radius:200px 200px 20px 20px; box-shadow:0 -20px 50px rgba(0,0,0,0.1), inset 0 0 0 4px var(--paper), inset 0 0 0 5px rgba(92,26,43,0.15); border-top:1px solid rgba(255,255,255,0.6); z-index:3;">
+  <img src="https://crismarpgg.github.io/Boda-K-J/sello.png" alt="Sello de Cera" class="floating-seal" style="position:absolute; top:-55px; left:50%; width:110px; z-index:10;" loading="lazy" decoding="async">
   
   <div class="reveal" style="padding-top: 80px; padding-bottom: 35px; max-width: 340px; margin: 0 auto;">
     <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:14.5px; line-height:1.8; color:var(--ink-soft);">
@@ -501,17 +504,21 @@
     <p class="rsvp-copy" style="color:var(--wine-dark);">Hubo un problema de conexión. Por favor intenta de nuevo.</p>
     <button class="btn-rsvp" id="retryRsvp" style="margin-top:18px;">Reintentar</button>
   </div>
+  
+  <div style="margin-top: 80px; padding-bottom: 30px;">
+    <p style="font-family:'Great Vibes', cursive; font-size:32px; color:var(--wine-dark); margin-bottom:12px;">Nos vemos en el gran día</p>
+    <p style="font-family:'Didot', 'Bodoni MT', serif; font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--ink-soft); font-weight:600;">Karime &amp; Jorge</p>
+    <div style="width:5px; height:5px; background:var(--gold); transform:rotate(45deg); margin:20px auto 30px; opacity:0.7;"></div>
+    <a href="https://www.instagram.com/eventi.ka" target="_blank" rel="noopener noreferrer" style="font-size:7.5px; letter-spacing:4px; text-transform:uppercase; color:var(--ink-soft); opacity:0.6; text-decoration:none; display:block; transition:opacity 0.3s ease;">Diseñado por Eventi.ka</a>
+  </div>
 </section>
-
-<footer>
-  <p style="font-family:'Great Vibes', cursive; font-size:32px; color:var(--wine-dark); margin-bottom:12px;">Nos vemos pronto</p>
-  <p style="font-family:'Didot', 'Bodoni MT', serif; font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--ink-soft); font-weight:600;">Karime &amp; Jorge</p>
-  <div style="width:5px; height:5px; background:var(--gold); transform:rotate(45deg); margin:20px auto 0; opacity:0.7;"></div>
-</footer>
 </main>
 
 <script>
 document.addEventListener("DOMContentLoaded", function(){
+  if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+  window.scrollTo(0, 0);
+
   var vid = document.getElementById("bgVideo");
   var btnShown = false;
   
@@ -577,13 +584,16 @@ document.getElementById("btnEntrar").addEventListener("click", function(){
 // MOTOR PARALLAX TRANSLATE3D (Solo iOS)
 if (CSS.supports('-webkit-touch-callout', 'none')) {
   var ticking = false;
-  var parallaxEls = document.querySelectorAll('.parallax-inner');
+  var parallaxEls = Array.from(document.querySelectorAll('.parallax-inner'));
   window.addEventListener('scroll', function() {
     if (!ticking) {
       window.requestAnimationFrame(function() {
         var h = window.innerHeight;
-        parallaxEls.forEach(function(el) {
-          var rect = el.parentElement.getBoundingClientRect();
+        // Fase 1: Lectura en lote (Evita Layout Thrashing)
+        var rects = parallaxEls.map(function(el) { return el.parentElement.getBoundingClientRect(); });
+        // Fase 2: Escritura en lote
+        parallaxEls.forEach(function(el, i) {
+          var rect = rects[i];
           if (rect.top <= h && rect.bottom >= 0) {
             var percent = (h - rect.top) / (h + rect.height);
             var y = (percent - 0.5) * 20;
@@ -599,13 +609,19 @@ if (CSS.supports('-webkit-touch-callout', 'none')) {
 
 (function(){
   const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzCiOp1kuupmgVWvqvAKlNNB8Uxa9-UgTJX5ry9-B5NrSbUMLXdnf8U-5_4WIJd-oQN/exec";
-  const guestId = new URLSearchParams(window.location.search).get("id") || "";
+  const guestId = new URLSearchParams(window.location.search).get("id") // "";
   var pases = 1;
 
+  function aplicarFallback() {
+    pases = 1;
+    document.getElementById("ui-texto-reserva").innerText = "Hemos reservado en su honor";
+    document.getElementById("ui-pases").innerText = "1";
+    document.getElementById("ui-label-pases").innerText = "Pase";
+  }
+
   if (!guestId) {
-    alert("Enlace inválido. Por favor abre el enlace original enviado por WhatsApp.");
+    aplicarFallback();
   } else {
-    // API Call: Extrae los datos relacionales al abrir la página
     fetch(SCRIPT_URL + "?id=" + guestId)
       .then(function(res) { return res.json(); })
       .then(function(data) {
@@ -614,7 +630,7 @@ if (CSS.supports('-webkit-touch-callout', 'none')) {
           document.getElementById("ui-texto-reserva").innerText = data.textoReserva;
           document.getElementById("ui-pases").innerText = data.pases;
           document.getElementById("ui-label-pases").innerText = data.labelPases;
-          
+
           var estado = data.estado_rsvp ? data.estado_rsvp.trim().toLowerCase() : "";
           if (estado === "confirma" || estado === "no_asiste") {
             showState("success");
@@ -622,20 +638,29 @@ if (CSS.supports('-webkit-touch-callout', 'none')) {
             document.getElementById("successMsg").textContent = estado === "confirma" ? "Tu confirmación fue recibida. ¡Nos vemos en la celebración!" : "Lamentamos que no puedas acompañarnos. Gracias por avisarnos.";
             document.getElementById("btnCalendar").style.display = estado === "confirma" ? "inline-block" : "none";
           }
+        } else {
+          aplicarFallback();
         }
       })
-      .catch(function(err) { console.error("Error al cargar datos del invitado"); });
+      .catch(function() { aplicarFallback(); });
   }
 
   var boda = new Date("Nov 21, 2026 14:00:00").getTime();
-  setInterval(function(){
-    var now = new Date().getTime(), d = boda - now;
-    if(d < 0) return;
-    document.getElementById("cd-days").innerText = String(Math.floor(d / (1000 * 60 * 60 * 24))).padStart(2, '0');
-    document.getElementById("cd-hours").innerText = String(Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-    document.getElementById("cd-mins").innerText = String(Math.floor((d % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-    document.getElementById("cd-secs").innerText = String(Math.floor((d % (1000 * 60)) / 1000)).padStart(2, '0');
-  }, 1000);
+  var elDays = document.getElementById("cd-days");
+  var elHours = document.getElementById("cd-hours");
+  var elMins = document.getElementById("cd-mins");
+  var elSecs = document.getElementById("cd-secs");
+  
+  if(elDays && elHours && elMins && elSecs) {
+    var cdInterval = setInterval(function(){
+      var now = new Date().getTime(), d = boda - now;
+      if(d < 0) { clearInterval(cdInterval); return; }
+      elDays.innerText = String(Math.floor(d / (1000 * 60 * 60 * 24))).padStart(2, '0');
+      elHours.innerText = String(Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+      elMins.innerText = String(Math.floor((d % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+      elSecs.innerText = String(Math.floor((d % (1000 * 60)) / 1000)).padStart(2, '0');
+    }, 1000);
+  }
 
   var radios = document.querySelectorAll(".radio-opt");
   radios.forEach(function(opt){
@@ -674,8 +699,6 @@ if (CSS.supports('-webkit-touch-callout', 'none')) {
     // AbortController para evitar cuelgues por mala señal en móviles
     var controller = new AbortController();
     var timeoutId = setTimeout(function() { controller.abort(); }, 15000); // 15 segundos max
-    
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzCiOp1kuupmgVWvqvAKlNNB8Uxa9-UgTJX5ry9-B5NrSbUMLXdnf8U-5_4WIJd-oQN/exec";
 
     fetch(SCRIPT_URL, {
       method: "POST",
@@ -702,7 +725,7 @@ if (CSS.supports('-webkit-touch-callout', 'none')) {
         
         var btnCal = document.getElementById("btnCalendar");
         if(asistencia === "confirma") {
-          var icsData = "BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nDTSTART:20261121T210000Z\nDTEND:20261122T080000Z\nSUMMARY:Boda Karime & Jorge\nDESCRIPTION:Ceremonia a las 5:00 PM en Parroquia de San Gabriel. Recepción a las 8:00 PM en Jardines del Sol.\nLOCATION:Navolato, Sinaloa\nBEGIN:VALARM\nTRIGGER:-P2W\nACTION:DISPLAY\nDESCRIPTION:Recordatorio: Boda Karime & Jorge en 2 semanas\nEND:VALARM\nBEGIN:VALARM\nTRIGGER:-P1W\nACTION:DISPLAY\nDESCRIPTION:Recordatorio: Boda Karime & Jorge en 1 semana\nEND:VALARM\nEND:VEVENT\nEND:VCALENDAR";
+          var icsData = "BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nDTSTART:20261122T000000Z\nDTEND:20261122T090000Z\nSUMMARY:Boda Karime & Jorge\nDESCRIPTION:Ceremonia a las 5:00 PM en Parroquia de San Gabriel. Recepción a las 8:00 PM en Jardines del Sol.\nLOCATION:Navolato, Sinaloa\nBEGIN:VALARM\nTRIGGER:-P2W\nACTION:DISPLAY\nDESCRIPTION:Recordatorio: Boda Karime & Jorge en 2 semanas\nEND:VALARM\nBEGIN:VALARM\nTRIGGER:-P1W\nACTION:DISPLAY\nDESCRIPTION:Recordatorio: Boda Karime & Jorge en 1 semana\nEND:VALARM\nEND:VEVENT\nEND:VCALENDAR";
           btnCal.href = "data:text/calendar;charset=utf8," + encodeURIComponent(icsData);
           btnCal.style.display = "inline-block";
         } else {
@@ -758,6 +781,7 @@ document.getElementById("retryRsvp").addEventListener("click", function(){
     window.addEventListener("resize", resize, { passive: true });
     for(var i=0; i<45; i++) particles.push({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*2.5 + 0.5, d: Math.random()*0.4 + 0.1 });
     function draw() {
+      if (document.hidden) { requestAnimationFrame(draw); return; }
       ctx.clearRect(0,0,canvas.width,canvas.height);
       ctx.fillStyle = "rgba(169, 138, 78, 0.7)";
       ctx.beginPath();
