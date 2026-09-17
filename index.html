@@ -608,8 +608,8 @@ if (CSS.supports('-webkit-touch-callout', 'none')) {
 }
 
 (function(){
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzCiOp1kuupmgVWvqvAKlNNB8Uxa9-UgTJX5ry9-B5NrSbUMLXdnf8U-5_4WIJd-oQN/exec";
-  const guestId = new URLSearchParams(window.location.search).get("id") // "";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwxvmegNLMUGk1kiXrK6EncoryFd_6wPTHJgeLROS0enwzIKZEPl6LnwLXc9tOhPpZq/exec";
+  const guestId = new URLSearchParams(window.location.search).get("id") || "";
   var pases = 1;
 
   function aplicarFallback() {
