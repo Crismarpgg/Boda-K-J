@@ -22,10 +22,32 @@
 <link rel="preload" href="https://crismarpgg.github.io/Boda-K-J/poster.jpg" as="image" fetchpriority="high">
 <link rel="preload" href="https://crismarpgg.github.io/Boda-K-J/monograma.png" as="image" fetchpriority="high">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/playfair-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/montserrat-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+  /* Tipografías alojadas en el repo (las mismas de Google Fonts) */
+  @font-face{font-family:'Great Vibes';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/great-vibes-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+  @font-face{font-family:'Great Vibes';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/great-vibes-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+  @font-face{font-family:'Playfair Display';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/playfair-display-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+  @font-face{font-family:'Playfair Display';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/playfair-display-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+  @font-face{font-family:'Playfair Display';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/playfair-display-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+  @font-face{font-family:'Playfair Display';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/playfair-display-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+  @font-face{font-family:'Playfair Display';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/playfair-display-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+  @font-face{font-family:'Playfair Display';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/playfair-display-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+  @font-face{font-family:'Playfair Display';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/playfair-display-latin-ext-400-italic.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+  @font-face{font-family:'Playfair Display';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/playfair-display-latin-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+  @font-face{font-family:'Playfair Display';font-style:italic;font-weight:500;font-display:swap;src:url(fonts/playfair-display-latin-ext-500-italic.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+  @font-face{font-family:'Playfair Display';font-style:italic;font-weight:500;font-display:swap;src:url(fonts/playfair-display-latin-500-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+  @font-face{font-family:'Montserrat';font-style:normal;font-weight:300;font-display:swap;src:url(fonts/montserrat-latin-ext-300-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+  @font-face{font-family:'Montserrat';font-style:normal;font-weight:300;font-display:swap;src:url(fonts/montserrat-latin-300-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+  @font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+  @font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/montserrat-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+  @font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/montserrat-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+  @font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/montserrat-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+  @font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+  @font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+  @font-face{font-family:'Montserrat';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+  @font-face{font-family:'Montserrat';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
   video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; appearance: none; }
   video::-webkit-media-controls { display: none !important; }
   
@@ -204,6 +226,7 @@
   .reveal-delay-4{transition-delay:0.4s;}
   .reveal-delay-5{transition-delay:0.5s;}
   .anim-off, .anim-off *, .anim-off *::after{animation-play-state:paused !important;}
+  img[data-src]:not([src]){visibility:hidden;}
   @media(min-width:481px){body{background:#c9c2ae; padding:40px 0;} .invitation{border-radius:12px; box-shadow:0 30px 60px rgba(0,0,0,0.15), 0 0 0 1px rgba(255,255,255,0.4);}}
 </style>
 </head>
@@ -233,8 +256,8 @@
   
   <div class="scroll-indicator reveal" style="transition-delay: 2.5s !important;"></div>
 
-  <audio id="bgMusic" loop preload="none" data-lite="https://crismarpgg.github.io/Boda-K-J/cancion-lite.MP3">
-    <source src="https://crismarpgg.github.io/Boda-K-J/cancion.MP3" type="audio/mpeg">
+  <audio id="bgMusic" loop preload="none">
+    <source src="https://crismarpgg.github.io/Boda-K-J/cancion-lite.MP3" type="audio/mpeg">
   </audio>
 </header>
 
@@ -284,7 +307,7 @@
     <p class="venue-name">Parroquia de San Gabriel</p>
     <p class="venue-time" style="margin-bottom: 16px;">5:00 PM</p>
     <div style="position: relative; width: 100%; height: 180px; border-radius: 8px; overflow: hidden; margin-bottom: 16px; border: 1px solid rgba(92,26,43,0.2);">
-      <iframe src="https://maps.google.com/maps?q=24.818256506605145,-107.40011064316235&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy" tabindex="-1" width="100%" height="100%" style="border:0; filter: grayscale(100%) sepia(40%) hue-rotate(-15deg) contrast(90%);" allowfullscreen=""></iframe>
+      <iframe data-src="https://maps.google.com/maps?q=24.818256506605145,-107.40011064316235&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy" tabindex="-1" width="100%" height="100%" style="border:0; filter: grayscale(100%) sepia(40%) hue-rotate(-15deg) contrast(90%);" allowfullscreen=""></iframe>
       <a href="https://maps.app.goo.gl/12MBpZJ59JNQSAUBA" target="_blank" rel="noopener" aria-label="Abrir ubicación de la ceremonia en Maps" style="position:absolute; top:0; left:0; right:0; bottom:0;"></a>
     </div>
     <a class="btn-outline" href="https://maps.app.goo.gl/12MBpZJ59JNQSAUBA" target="_blank">Abrir en App</a>
@@ -295,7 +318,7 @@
     <p class="venue-name">Jardines del Sol</p>
     <p class="venue-time" style="margin-bottom: 16px;">8:00 PM</p>
     <div style="position: relative; width: 100%; height: 180px; border-radius: 8px; overflow: hidden; margin-bottom: 16px; border: 1px solid rgba(92,26,43,0.2);">
-      <iframe src="https://maps.google.com/maps?q=24.765332955943983,-107.68908798686493&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy" tabindex="-1" width="100%" height="100%" style="border:0; filter: grayscale(100%) sepia(40%) hue-rotate(-15deg) contrast(90%);" allowfullscreen=""></iframe>
+      <iframe data-src="https://maps.google.com/maps?q=24.765332955943983,-107.68908798686493&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy" tabindex="-1" width="100%" height="100%" style="border:0; filter: grayscale(100%) sepia(40%) hue-rotate(-15deg) contrast(90%);" allowfullscreen=""></iframe>
       <a href="https://maps.app.goo.gl/tSDx2gF6tsiiWpV4A" target="_blank" rel="noopener" aria-label="Abrir ubicación de la recepción en Maps" style="position:absolute; top:0; left:0; right:0; bottom:0;"></a>
     </div>
     <a class="btn-outline" href="https://maps.app.goo.gl/tSDx2gF6tsiiWpV4A" target="_blank">Abrir en App</a>
@@ -305,37 +328,37 @@
 <!-- ITINERARIO -->
 <section id="itinerario" class="reveal">
   <div class="itinerary-wrapper">
-    <img src="https://crismarpgg.github.io/Boda-K-J/sobre.png" data-lite="https://crismarpgg.github.io/Boda-K-J/sobre-lite.png" width="1261" height="1632" alt="Fondo Sobre" class="envelope-bg reveal" loading="lazy" decoding="async">
+    <img data-src="https://crismarpgg.github.io/Boda-K-J/sobre.png" data-lite="https://crismarpgg.github.io/Boda-K-J/sobre-lite.png" width="1261" height="1632" alt="Fondo Sobre" class="envelope-bg reveal" loading="lazy" decoding="async">
     <div class="itinerary-card reveal" style="transition-delay: 0.4s !important;">
-      <img src="https://crismarpgg.github.io/Boda-K-J/sello.png" width="333" height="431" alt="Sello" class="static-seal" loading="lazy" decoding="async" style="position:absolute; top:-47px; left:50%; width:90px; height:auto; z-index:5;">
+      <img data-src="https://crismarpgg.github.io/Boda-K-J/sello.png" width="333" height="431" alt="Sello" class="static-seal" loading="lazy" decoding="async" style="position:absolute; top:-47px; left:50%; width:90px; height:auto; z-index:5;">
       <p class="script" style="font-size:28px; margin-bottom:40px;">Itinerario</p>
       
       <div class="itinerary-item">
-        <img src="https://crismarpgg.github.io/Boda-K-J/icono-1.png" width="198" height="352" alt="Ceremonia" class="itinerary-img" style="margin-bottom: -18px;" loading="lazy" decoding="async">
+        <img data-src="https://crismarpgg.github.io/Boda-K-J/icono-1.png" width="198" height="352" alt="Ceremonia" class="itinerary-img" style="margin-bottom: -18px;" loading="lazy" decoding="async">
         <p class="itinerary-title">Ceremonia Religiosa</p>
         <p class="itinerary-time">5:00 PM</p>
       </div>
       
       <div class="itinerary-item">
-        <img src="https://crismarpgg.github.io/Boda-K-J/icono-2.png" width="198" height="352" alt="Recepción" class="itinerary-img" loading="lazy" decoding="async">
+        <img data-src="https://crismarpgg.github.io/Boda-K-J/icono-2.png" width="198" height="352" alt="Recepción" class="itinerary-img" loading="lazy" decoding="async">
         <p class="itinerary-title">Recepción</p>
         <p class="itinerary-time">8:00 PM</p>
       </div>
       
       <div class="itinerary-item">
-        <img src="https://crismarpgg.github.io/Boda-K-J/icono-3.png" width="198" height="352" alt="Primer Baile" class="itinerary-img" loading="lazy" decoding="async">
+        <img data-src="https://crismarpgg.github.io/Boda-K-J/icono-3.png" width="198" height="352" alt="Primer Baile" class="itinerary-img" loading="lazy" decoding="async">
         <p class="itinerary-title">Primer Baile de Esposos</p>
         <p class="itinerary-time">8:30 PM</p>
       </div>
       
       <div class="itinerary-item">
-        <img src="https://crismarpgg.github.io/Boda-K-J/icono-4.png" width="198" height="352" alt="Cena" class="itinerary-img" loading="lazy" decoding="async">
+        <img data-src="https://crismarpgg.github.io/Boda-K-J/icono-4.png" width="198" height="352" alt="Cena" class="itinerary-img" loading="lazy" decoding="async">
         <p class="itinerary-title">Cena</p>
         <p class="itinerary-time">9:00 PM</p>
       </div>
       
       <div class="itinerary-item">
-        <img src="https://crismarpgg.github.io/Boda-K-J/icono-5.png" width="198" height="352" alt="Baile" class="itinerary-img" loading="lazy" decoding="async">
+        <img data-src="https://crismarpgg.github.io/Boda-K-J/icono-5.png" width="198" height="352" alt="Baile" class="itinerary-img" loading="lazy" decoding="async">
         <p class="itinerary-title">¡Todos a Bailar!</p>
         <p class="itinerary-time">9:30 PM</p>
       </div>
@@ -350,7 +373,7 @@
 <!-- DETALLES -->
 <section id="detalles" class="reveal">
   <div class="details-card" style="margin-top: 40px;">
-    <img src="https://crismarpgg.github.io/Boda-K-J/etiqueta.png" width="333" height="431" alt="Etiqueta KJ" class="floating-seal" style="position:absolute; top:-65px; left:50%; width:110px; height:auto; z-index:5;" loading="lazy" decoding="async">
+    <img data-src="https://crismarpgg.github.io/Boda-K-J/etiqueta.png" width="333" height="431" alt="Etiqueta KJ" class="floating-seal" style="position:absolute; top:-65px; left:50%; width:110px; height:auto; z-index:5;" loading="lazy" decoding="async">
     <div class="details-card-inner" style="padding-top: 60px;">
       <p class="script" style="font-size:28px; color:#4a1522; margin-bottom:0;">Dress Code</p>
       <div class="divider" style="margin: 25px auto 25px;"></div>
@@ -362,7 +385,7 @@
           Vestidos de noche con destellos, lentejuelas, plumas o telas satinadas que iluminen la noche y trajes oscuros con accesorios sofisticados como corbata, moño, paño y calzado de etiqueta.
         </p>
         
-               <img src="https://crismarpgg.github.io/Boda-K-J/vestido.png" data-lite="https://crismarpgg.github.io/Boda-K-J/vestido-lite.png" width="874" height="1131" alt="Ilustración Dress Code" style="width:100%; max-width:280px; height:auto; margin:-25px auto -110px; display:block; mix-blend-mode:multiply; filter:contrast(1.05); transform:translateZ(0); will-change:transform;" loading="lazy" decoding="async">
+               <img data-src="https://crismarpgg.github.io/Boda-K-J/vestido.png" data-lite="https://crismarpgg.github.io/Boda-K-J/vestido-lite.png" width="874" height="1131" alt="Ilustración Dress Code" style="width:100%; max-width:280px; height:auto; margin:-25px auto -110px; display:block; mix-blend-mode:multiply; filter:contrast(1.05); transform:translateZ(0); will-change:transform;" loading="lazy" decoding="async">
         
         <p class="label" style="font-size:10px; margin-bottom:12px;">Evitar colores</p>
         <div class="palette" style="margin-bottom:16px;">
@@ -427,7 +450,7 @@
 
 <!-- RSVP -->
 <section id="rsvp" style="position:relative; margin-top:-60px; background:var(--paper); border-radius:200px 200px 20px 20px; box-shadow:0 -20px 50px rgba(0,0,0,0.1), inset 0 0 0 4px var(--paper), inset 0 0 0 5px rgba(92,26,43,0.15); border-top:1px solid rgba(255,255,255,0.6); z-index:3;">
-  <img src="https://crismarpgg.github.io/Boda-K-J/sello.png" width="333" height="431" alt="Sello de Cera" class="floating-seal" style="position:absolute; top:-55px; left:50%; width:110px; height:auto; z-index:10;" loading="lazy" decoding="async">
+  <img data-src="https://crismarpgg.github.io/Boda-K-J/sello.png" width="333" height="431" alt="Sello de Cera" class="floating-seal" style="position:absolute; top:-55px; left:50%; width:110px; height:auto; z-index:10;" loading="lazy" decoding="async">
   
   <div class="reveal" style="padding-top: 80px; padding-bottom: 35px; max-width: 340px; margin: 0 auto;">
     <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:14.5px; line-height:1.8; color:var(--ink-soft);">
@@ -569,32 +592,60 @@ document.addEventListener("DOMContentLoaded", function(){
     : (con && con.downlink) ? Promise.resolve(/2g|3g/.test(con.effectiveType || "") || con.downlink < 2)
     : poster.then(function(ms) { return ms > 1500; });
 
-  // Prioridad 2: el video (normal o ligero) completo, listo para reproducirse sin pausas
+  // Prioridad 2: el video (normal o ligero). "Listo" = ya se puede reproducir (habilita el botón).
+  // "Completo" = el loop entero descargado (hasta entonces, nada más compite por la red).
+  var videoCompletoRes;
+  var videoCompleto = new Promise(function(r) { videoCompletoRes = r; });
   var video = decision.then(function(lento) {
     modoLigero = lento;
     document.documentElement.setAttribute("data-modo", lento ? "ligero" : "normal"); // visible en Elements para verificar
-    return new Promise(function(res) {
-      if (!vid) return res();
-      var full = vid.getAttribute("data-src"), lite = vid.getAttribute("data-src-lite");
-      var destino = (lento && lite) ? lite : full;
-      if (destino && vid.getAttribute("src") !== destino) vid.src = destino;
-      if (vid.readyState >= 4) return res();
-      vid.addEventListener("canplaythrough", res, { once: true });
-      vid.addEventListener("error", res, { once: true });
-      var p = vid.play();
-      if (p && p.catch) p.catch(function(){
-        res(); // autoplay bloqueado (en iPhone: modo de bajo consumo): no tiene caso esperar al video
-        var hint = document.getElementById("loaderHint");
-        if (hint) hint.innerHTML = "Para mejorar la experiencia,<br>sube el brillo y volumen<br>y desactiva el modo de bajo consumo";
-        // Si lo desactiva sin salir de la invitación, el video empieza a cargar antes del toque
-        var reintento = setInterval(function(){
-          if (document.body.classList.contains("is-open")) { clearInterval(reintento); return; }
-          var p2 = vid.play();
-          if (p2 && p2.then) p2.then(function(){ clearInterval(reintento); }).catch(function(){});
-        }, 2000);
+    if (!vid) { videoCompletoRes(); return; }
+    var full = vid.getAttribute("data-src"), lite = vid.getAttribute("data-src-lite");
+    var destino = (lento && lite) ? lite : full;
+    var revisar = function() {
+      try {
+        if (vid.duration > 0 && vid.buffered.length && vid.buffered.end(vid.buffered.length - 1) >= vid.duration - 0.3) videoCompletoRes();
+      } catch (e) {}
+    };
+    vid.addEventListener("progress", revisar);
+    vid.addEventListener("canplaythrough", revisar);
+    vid.addEventListener("error", videoCompletoRes, { once: true });
+
+    // Conexión lenta: el reproductor dosifica su descarga mientras reproduce (medido: 1.3 min contra 28 s).
+    // Se descarga como archivo normal, a toda velocidad, y se reproduce ya completo desde la memoria.
+    var fuente = (lento && window.fetch && window.URL && URL.createObjectURL)
+      ? fetch(destino).then(function(r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.blob(); })
+          .then(function(b) {
+            vid.addEventListener("error", function() { vid.src = destino; }, { once: true }); // si no reproduce desde memoria, vuelve al link
+            return URL.createObjectURL(b);
+          })
+          .catch(function() { return destino; }) // si la descarga falla, se usa el link como antes
+      : Promise.resolve(destino);
+
+    return fuente.then(function(src) {
+      if (src && vid.getAttribute("src") !== src) vid.src = src;
+      revisar();
+      return new Promise(function(res) {
+        if (vid.readyState >= 4) return res();
+        vid.addEventListener("canplaythrough", res, { once: true });
+        vid.addEventListener("error", res, { once: true });
+        var p = vid.play();
+        if (p && p.catch) p.catch(function(){
+          res(); videoCompletoRes(); // autoplay bloqueado (en iPhone: modo de bajo consumo): no tiene caso esperar al video
+          var hint = document.getElementById("loaderHint");
+          if (hint) hint.innerHTML = "Para mejorar la experiencia,<br>sube el brillo y volumen<br>y desactiva el modo de bajo consumo";
+          // Si lo desactiva sin salir de la invitación, el video empieza antes del toque
+          var reintento = setInterval(function(){
+            if (document.body.classList.contains("is-open")) { clearInterval(reintento); return; }
+            var p2 = vid.play();
+            if (p2 && p2.then) p2.then(function(){ clearInterval(reintento); }).catch(function(){});
+          }, 2000);
+        });
       });
     });
   });
+  // Seguro: si el navegador deja de descargar el video antes del final, la cola arranca 25 s después de que ya se podía reproducir
+  video.then(function() { setTimeout(videoCompletoRes, 25000); });
 
   // Prioridad 3: la música (normal o ligera) empieza a descargar cuando el video ya está listo
   var musica = video.then(function() {
@@ -606,29 +657,43 @@ document.addEventListener("DOMContentLoaded", function(){
     return Promise.race([cuando(audio, "canplay", audio.readyState >= 3), espera(1500)]); // iPhone no precarga audio sin toque
   });
 
-  Promise.all([portada, video, musica]).then(function() {
-    setTimeout(showBtn, 300);
-    // Prioridad 4: todo lo demás, en el orden exacto en que aparece al bajar, uno a la vez
-    // foto-1 → sobre → sello → íconos → foto-3 → etiqueta → vestido → foto-5 → sello RSVP → mapas
-    var cola = Array.prototype.slice.call(document.querySelectorAll('.parallax-inner[data-bg], img[loading="lazy"]'))
-      .concat(Array.prototype.slice.call(document.querySelectorAll('iframe[loading="lazy"]')));
-    (function siguiente(i) {
-      if (i >= cola.length) return;
-      var el = cola[i], hecho = false;
-      var avanzar = function() { if (hecho) return; hecho = true; siguiente(i + 1); };
-      setTimeout(avanzar, 15000); // seguro: si un archivo no responde, la cola no se detiene
+  // El botón aparece cuando el video ya se puede reproducir y la música está lista
+  Promise.all([portada, video, musica]).then(function() { setTimeout(showBtn, 300); });
+
+  // Carga de cada elemento (fotos, mapas, imágenes): una sola vez, en su versión normal o ligera
+  var cargar = function(el) {
+    if (el._carga) return el._carga;
+    el._carga = new Promise(function(done) {
+      var t = setTimeout(done, 15000); // seguro: si un archivo no responde, la cola no se detiene
+      var fin = function() { clearTimeout(t); done(); };
       if (el.hasAttribute("data-bg")) {
         var url = (modoLigero && el.getAttribute("data-bg-lite")) || el.getAttribute("data-bg");
         el.style.backgroundImage = "url('" + url + "')";
-        var img = new Image(); img.onload = img.onerror = avanzar; img.src = url;
-      } else if (el.tagName === "IMG" && el.complete && el.naturalWidth) {
-        avanzar(); // ya estaba cargada
+        var img = new Image(); img.onload = img.onerror = fin; img.src = url;
       } else {
-        if (modoLigero && el.getAttribute("data-lite")) el.src = el.getAttribute("data-lite");
-        el.addEventListener("load", avanzar, { once: true });
-        el.addEventListener("error", avanzar, { once: true });
-        el.loading = "eager"; // le toca su turno: se descarga ya, sin esperar a que el invitado llegue
+        el.addEventListener("load", fin, { once: true });
+        el.addEventListener("error", fin, { once: true });
+        el.loading = "eager";
+        el.src = (modoLigero && el.getAttribute("data-lite")) || el.getAttribute("data-src");
       }
+    });
+    return el._carga;
+  };
+  var porCargar = Array.prototype.slice.call(document.querySelectorAll(".parallax-inner[data-bg], iframe[data-src], img[data-src]")); // orden visual
+
+  // Rescate: si el invitado llega a un elemento antes de su turno, se carga en ese momento
+  decision.then(function() {
+    var rescate = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) { rescate.unobserve(e.target); cargar(e.target); } });
+    }, { rootMargin: "1200px 0px" }); // se anticipa ~1 pantalla y media: los mapas necesitan varios segundos
+    porCargar.forEach(function(el) { rescate.observe(el); });
+  });
+
+  // Prioridad 4: todo lo demás, cuando el video ya está completo, en el orden exacto en que aparece al bajar
+  // foto-1 → mapas → sobre → sello → íconos → foto-3 → etiqueta → vestido → foto-5 → sello RSVP
+  Promise.all([portada, videoCompleto, musica]).then(function() {
+    (function siguiente(i) {
+      if (i < porCargar.length) cargar(porCargar[i]).then(function() { siguiente(i + 1); });
     })(0);
   });
 
