@@ -642,7 +642,8 @@ document.addEventListener("DOMContentLoaded", function(){
         vid.addEventListener("canplaythrough", res, { once: true });
         vid.addEventListener("error", res, { once: true });
         var p = vid.play();
-        if (p && p.catch) p.catch(function(){
+        if (p && p.catch) p.catch(function(err){
+          if (!err || err.name !== "NotAllowedError") return; // solo un bloqueo real de autoplay, no errores de carga
           res(); videoCompletoRes(); // autoplay bloqueado (en iPhone: modo de bajo consumo): no tiene caso esperar al video
           var hint = document.getElementById("loaderHint");
           if (hint) hint.innerHTML = "Para mejorar la experiencia,<br>sube el brillo y volumen<br>y desactiva el modo de bajo consumo";
